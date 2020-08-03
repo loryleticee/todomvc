@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+    nginx:
+        image: 'nginx:latest'
+        container_name: todomvc-nginx 
+        ports:
+            - '80:80'
+        volumes:
+            - '.:/usr/share/nginx/html/todomvc:cached'
+            - './nginx:/etc/nginx/conf.d:cached'
+#networks: 
+#  default:
+#    name: ayrlomus

@@ -1,0 +1,11 @@
+image: node:12
+
+pages:
+  script:
+    - rm -rf examples/vue/node_modules
+    - cp -r examples/vu public
+    - cd public
+    - npm install
+    artifacts:
+      paths:
+        - public
